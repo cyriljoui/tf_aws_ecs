@@ -65,8 +65,6 @@ resource "aws_autoscaling_group" "ecs" {
     propagate_at_launch = true
   }]
 
-  tags = ["${var.extra_tags}"]
-
   lifecycle {
     create_before_destroy = true
   }
